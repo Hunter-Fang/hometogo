@@ -4,6 +4,23 @@
    Kami 设计系统 - 卡门前端样式
    ======================================== */
 
+/* 加载本地仓耳今楷字体 */
+@font-face {
+  font-family: "CangErJinKai";
+  src: url("/fonts/仓耳今楷02-W04.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CangErJinKai";
+  src: url("/fonts/仓耳今楷02-W04.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* 表面 */
   --parchment:    #f5f4ed;   /* 页面背景 - 暖奶油色 */
@@ -43,7 +60,7 @@
   --focus:        #3898ec;
 
   /* 字体 */
-  --serif: "Newsreader", "TsangerJinKai02", "Source Han Serif SC",
+  --serif: "CangErJinKai", "Newsreader", "TsangerJinKai02", "Source Han Serif SC",
            "Noto Serif CJK SC", "Songti SC", Georgia, serif;
   --sans:  "Inter", -apple-system, BlinkMacSystemFont,
            "Source Han Sans SC", "PingFang SC", "Helvetica Neue", sans-serif;
@@ -113,42 +130,46 @@ body::before {
   z-index: 0;
 }
 
-/* 字体排版类 */
+/* 字体排版类 - 优化行距让排版更优雅 */
 .font-display {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 .font-h1 {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .font-h2 {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 .font-h3 {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .font-body-lead {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.8;
   font-family: var(--serif);
+  letter-spacing: 0.02em;
 }
 
 .font-body {
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .font-caption {
